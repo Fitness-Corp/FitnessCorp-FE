@@ -10,6 +10,7 @@ import reducer from './reducers';
 import { configureStore } from '@reduxjs/toolkit';
 import NavBar from './components/landingPage/NavBar';
 import SplashLanding from './components/landingPage/SpalshLanding';
+import ClassSection from './components/landingPage/ClassSection';
 import AboutUs from './components/landingPage/AboutUs';
 
 const store = configureStore({
@@ -30,6 +31,7 @@ function App({ dispatch }) {
         <NavBar />
         <SplashLanding />
         <AboutUs />
+        <ClassSection />
       </div>
     </Provider>
 
