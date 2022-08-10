@@ -6,7 +6,9 @@ import LoginPopUp from "../LoginPopUp";
 
 const SplashLanding = ({ loginPop }) => {
     // const [ loginPop, setloginPop ] = useState(false)
-
+    if(window.localStorage.getItem('login')){
+        
+    }
 
     return (
         <div>

@@ -5,11 +5,10 @@ import { toggleLogin } from "../../actions";
 
 
 
-const NavBar = ({ loginPop, dispatch }) => {
+const NavBar = ({ dispatch }) => {
 
     const toggleLoginButton = () => {
         dispatch(toggleLogin())
-        console.log(loginPop)
     }
 
     return (
@@ -19,11 +18,7 @@ const NavBar = ({ loginPop, dispatch }) => {
     )
 }
 
-const mapState = state => {
-    return {
-        loginPop: state.loginPop
-    }
-}
 
 
-export default connect(mapState)(NavBar)
+
+export default connect()(NavBar)
