@@ -12,6 +12,11 @@ import NavBar from './components/landingPage/NavBar';
 import SplashLanding from './components/landingPage/SpalshLanding';
 import Reviews from './components/landingPage/Reviews';
 import Footer from './components/landingPage/Footer';
+import MembershipSection from './components/landingPage/MembershipSection';
+import IconSection from './components/landingPage/IconSection';
+import ClassSection from './components/landingPage/ClassSection';
+import AboutUs from './components/landingPage/AboutUs';
+
 
 const store = configureStore({
   reducer: reducer
@@ -30,6 +35,10 @@ function App({ dispatch }) {
       <div className="App">
         <NavBar />
         <SplashLanding />
+        <AboutUs />
+        <ClassSection />
+        <IconSection />
+        <MembershipSection />
         <Reviews />
         <Footer />
       </div>
