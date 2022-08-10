@@ -7,13 +7,14 @@ import logger from "redux-logger";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import reducer from './reducers';
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 import NavBar from './components/landingPage/NavBar';
 import SplashLanding from './components/landingPage/SpalshLanding';
+import IconSection from './components/landingPage/IconSection';
 
 const store = configureStore({
   reducer: reducer
-})
+});
 
 
 
@@ -25,10 +26,11 @@ function App({ dispatch }) {
   return (
     <Provider store={store}>
 
-    <div className="App">
-      <NavBar/>
-      <SplashLanding/>
-    </div>
+      <div className="App">
+        <NavBar />
+        <SplashLanding />
+        <IconSection />
+      </div>
     </Provider>
 
   );
