@@ -4,6 +4,9 @@ export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAIL = "FETCH_FAIL";
 export const FORM_ERROR = 'FORM_ERROR'
 export const LOG_OUT = 'LOG_OUT'
+export const TOGGLE_LOGIN = 'TOGGLE_LOGIN'
+
+
 
 
 export const actions = ''
@@ -52,4 +55,8 @@ export const fetchFail = (error) => {
 
 export const formError = (error) => {
     return({type:FORM_ERROR, payload: error})
+}
+
+export const toggleLogin = () => {
+    return({type:TOGGLE_LOGIN})
 }
