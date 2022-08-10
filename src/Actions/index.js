@@ -17,11 +17,12 @@ export const login = (form) => (dispatch) => {
     dispatch(fetchStart())
     axios.post('https://tv-weather-app-login.herokuapp.com/api/login', form)
         .then(resp => {
-            window.localStorage.setItem('login', resp.token)
+            window.localStorage.setItem('login', resp.data.token)
+            console.log(resp.data)
             dispatch(fetchSuccess(form.userName))
         })
         .catch(err => {
-            dispatch(fetchFail(err.response.data.originalMessage))
+            dispatch(fetchFail(err))
         })
 }
 
@@ -32,7 +33,7 @@ export const logout = () => {
 
 export const register = (form) => (dispatch) => {
     dispatch(fetchStart())
-    axios.post('https://tv-weather-app-login.herokuapp.com/api/register', form)
+    axios.post('http://localhost:9000/api/register', form)
         .then(resp => {
             dispatch(login(form))
         })

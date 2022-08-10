@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-
+import { login } from "../actions";
+import { connect } from "react-redux";
 
 const initialForm = {
     username: '',
@@ -10,7 +10,7 @@ const initialForm = {
 }
 
 
-const LoginPopUp = () => {
+const LoginPopUp = ({ dispatch }) => {
     const [form, setForm] = useState(initialForm)
 
     const handleChange = e => {
@@ -23,12 +23,12 @@ const LoginPopUp = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        .then(() => {
-            // dispatch login info to wherever it goes
-        })
-        .catch(() => {
+        // .then(() => {
+            dispatch(login(form))
+        // })
+        // .catch(() => {
             // dispatch error message to wherever it goes
-        })
+        // })
     }
 
     return (
@@ -75,4 +75,4 @@ const LoginPopUp = () => {
 }
 
 
-export default LoginPopUp
+export default connect()(LoginPopUp)
