@@ -4,6 +4,9 @@ export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAIL = "FETCH_FAIL";
 export const FORM_ERROR = 'FORM_ERROR'
 export const LOG_OUT = 'LOG_OUT'
+export const TOGGLE_LOGIN = 'TOGGLE_LOGIN'
+
+
 
 
 export const actions = ''
@@ -14,11 +17,12 @@ export const login = (form) => (dispatch) => {
     dispatch(fetchStart())
     axios.post('https://tv-weather-app-login.herokuapp.com/api/login', form)
         .then(resp => {
-            window.localStorage.setItem('login', resp.token)
+            window.localStorage.setItem('login', resp.data.token)
             dispatch(fetchSuccess(form.userName))
         })
         .catch(err => {
-            dispatch(fetchFail(err.response.data.originalMessage))
+            dispatch(fetchFail(err.message))
+            console.log(err.message)
         })
 }
 
@@ -34,7 +38,7 @@ export const register = (form) => (dispatch) => {
             dispatch(login(form))
         })
         .catch(err => {
-            dispatch(fetchFail(err))
+            dispatch(fetchFail(err.message))
         })
 }
 
@@ -52,4 +56,8 @@ export const fetchFail = (error) => {
 
 export const formError = (error) => {
     return({type:FORM_ERROR, payload: error})
+}
+
+export const toggleLogin = () => {
+    return({type:TOGGLE_LOGIN})
 }
