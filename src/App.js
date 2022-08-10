@@ -10,6 +10,8 @@ import reducer from './reducers';
 import { configureStore } from '@reduxjs/toolkit';
 import NavBar from './components/landingPage/NavBar';
 import SplashLanding from './components/landingPage/SpalshLanding';
+import Reviews from './components/landingPage/Reviews';
+import Footer from './components/landingPage/Footer';
 import MembershipSection from './components/landingPage/MembershipSection';
 import IconSection from './components/landingPage/IconSection';
 import ClassSection from './components/landingPage/ClassSection';
@@ -32,11 +34,13 @@ function App({ dispatch }) {
 
       <div className="App">
         <NavBar />
-        <SplashLanding />    
+        <SplashLanding />
         <AboutUs />
         <ClassSection />
         <IconSection />
         <MembershipSection />
+        <Reviews />
+        <Footer />
       </div>
     </Provider>
 
