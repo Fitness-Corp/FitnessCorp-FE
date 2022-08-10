@@ -1,12 +1,19 @@
-import { FETCH_FAIL, FETCH_START, FETCH_SUCCESS, FORM_ERROR, LOG_OUT } from "../actions";
+import { TOGGLE_LOGIN, FETCH_FAIL, FETCH_START, FETCH_SUCCESS, FORM_ERROR, LOG_OUT } from "../actions";
 
 export const initialState = {
+    loginPop: false,
     loggedIn: false,
     error: ''
 }
 
 const reducer = (state= initialState, action)=>{
     switch (action.type) {
+        case TOGGLE_LOGIN: {
+            return {
+                ...state,
+                loginPop: !state.loginPop
+            }
+        }
         case FETCH_SUCCESS: {
             return {
                 ...state,

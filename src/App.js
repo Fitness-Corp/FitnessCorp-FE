@@ -11,6 +11,9 @@ import { configureStore } from '@reduxjs/toolkit';
 import NavBar from './components/landingPage/NavBar';
 import SplashLanding from './components/landingPage/SpalshLanding';
 import IconSection from './components/landingPage/IconSection';
+import ClassSection from './components/landingPage/ClassSection';
+import AboutUs from './components/landingPage/AboutUs';
+
 
 const store = configureStore({
   reducer: reducer
@@ -29,6 +32,8 @@ function App({ dispatch }) {
       <div className="App">
         <NavBar />
         <SplashLanding />
+        <AboutUs />
+        <ClassSection />
         <IconSection />
       </div>
     </Provider>
