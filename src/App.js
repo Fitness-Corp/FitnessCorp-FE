@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import reducer from './reducers';
 import { configureStore } from '@reduxjs/toolkit';
 import NavBar from './components/landingPage/NavBar';
-import SplashLanding from './components/landingPage/SpalshLanding';
+import SplashLanding from './components/landingPage/SplashLanding';
 import Reviews from './components/landingPage/Reviews';
 import Footer from './components/landingPage/Footer';
 import MembershipSection from './components/landingPage/MembershipSection';
