@@ -13,7 +13,6 @@ const ClassModalCard = ({ gym }) => {
         <p>{gym.firstText}</p>
         <p>{gym.secondIcon}</p>
         <p>{gym.secondText}</p>
-
       </div>
     </div>
   );
