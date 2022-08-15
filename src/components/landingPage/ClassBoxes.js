@@ -29,6 +29,7 @@ const ClassBoxes = ({ data }) => {
                 }
               })
             }
+            <button>Checkout</button>
           </div>
         )}
       </Popup>
