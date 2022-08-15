@@ -1,10 +1,12 @@
 import React from "react";
 import Popup from "reactjs-popup";
 import '../../App.css';
+import classData from "../../data/classData";
 import classModalData from "../../data/classModalData";
 import ClassModalCard from "./ClassModalCard";
 
 const ClassBoxes = ({ data }) => {
+
   return (
     <div className="classBoxes">
       {/* image */}
@@ -21,9 +23,11 @@ const ClassBoxes = ({ data }) => {
               &times;
             </button>
             {
-              classModalData.map((gym) => (
-                <ClassModalCard key={gym.id} gym={gym} />
-              ))
+              classModalData.map(function (gym) {
+                if (gym.id === data.id) {
+                  return <ClassModalCard gym={gym} key={gym.title} />;
+                }
+              })
             }
           </div>
         )}
