@@ -5,7 +5,7 @@ import ClassBoxes from "./ClassBoxes";
 const ClassSection = () => {
   return (
     <div>
-      <p>Discover Our Classes</p>
+      <h3>Discover Our Classes</h3>
       {
         classData.map((data) => (
           <ClassBoxes data={data} key={data.id} />
