@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.carousel-wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 20px
+}
+
+.review  {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
