@@ -11,7 +11,7 @@ const initialForm = {
 }
 
 
-const LoginPopUp = ({ dispatch }) => {
+const LoginPopUp = ({ fetching, loggedIn, dispatch }) => {
     const [form, setForm] = useState(initialForm)
     const [register, setRegister] = useState(false)
 
@@ -36,9 +36,20 @@ const LoginPopUp = ({ dispatch }) => {
             // dispatch error message to wherever it goes
         // })
     }
+        if(loggedIn) {
+            return null
+        }
         if(register) {
             return (
                 <RegistrationPopUp/>
+            )
+        }
+
+        if(fetching) {
+            return (
+                <>
+                 <h3>Loading...</h3>
+                </>
             )
         }
     return (
@@ -73,5 +84,11 @@ const LoginPopUp = ({ dispatch }) => {
     )
 }
 
+const mapState = (state) => {
+    return {
+        fetching: state.fetching,
+        loggedIn: state.loggedIn,
+    }
+}
 
-export default connect()(LoginPopUp)
+export default connect(mapState)(LoginPopUp)

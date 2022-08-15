@@ -11,7 +11,7 @@ const initialForm = {
 }
 
 
-const RegistrationPopUp = ({ dispatch }) => {
+const RegistrationPopUp = ({ fetching, dispatch }) => {
     const [form, setForm] = useState(initialForm)
 
     const handleChange = e => {
@@ -30,6 +30,14 @@ const RegistrationPopUp = ({ dispatch }) => {
         // .catch(() => {
             // dispatch error message to wherever it goes
         // })
+    }
+
+    if(fetching) {
+        return (
+            <>
+             <h3>Loading...</h3>
+            </>
+        )
     }
 
     return (
@@ -75,5 +83,11 @@ const RegistrationPopUp = ({ dispatch }) => {
     )
 }
 
+const mapState = (state) => {
+    return {
+        fetching: state.fetching
+    }
+}
 
-export default connect()(RegistrationPopUp)
+
+export default connect(mapState)(RegistrationPopUp)

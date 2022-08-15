@@ -15,7 +15,7 @@ export const actions = ''
 export const login = (form) => (dispatch) => {
     
     dispatch(fetchStart())
-    axios.post('https://tv-weather-app-login.herokuapp.com/api/login', form)
+    axios.post('https://fitnesscorp.herokuapp.com/api/login', form)
         .then(resp => {
             window.localStorage.setItem('login', resp.data.token)
             dispatch(fetchSuccess(form.userName))
@@ -33,7 +33,7 @@ export const logout = () => {
 
 export const register = (form) => (dispatch) => {
     dispatch(fetchStart())
-    axios.post('https://tv-weather-app-login.herokuapp.com/api/register', form)
+    axios.post('https://fitnesscorp.herokuapp.com/api/register', form)
         .then(resp => {
             dispatch(login(form))
         })
