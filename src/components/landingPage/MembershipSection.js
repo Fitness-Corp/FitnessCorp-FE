@@ -12,7 +12,7 @@ export default function MembershipSection() {
       <div>
         {
           membershipData.map((m) => (
-            <div>
+            <div key={m.id}>
               <h3>{m.name}</h3>
               <p>{m.bio}</p>
               <Popup
@@ -28,7 +28,7 @@ export default function MembershipSection() {
                     {
                       membershipModalData.map((m2) => {
                         if (m.id === m2.id) {
-                          return <MembershipModalCard m2={m2} />;
+                          return <MembershipModalCard m2={m2} key={m2.price} />;
                         }
                       })
                     }

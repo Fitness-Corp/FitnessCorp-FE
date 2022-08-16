@@ -6,8 +6,8 @@ import '../../App.css';
 
 export default function CarouselReviews() {
   return (
-    <div class="carousel-wrapper">
-      <Carousel infiniteLoop autoPlay>
+    <div className="carousel-wrapper">
+      <Carousel infiniteLoop autoPlay showThumbs={false}>
         <div className='review'>
           <span><AiFillStar /><AiFillStar /><AiFillStar /><AiFillStar /><AiFillStar /></span>
           <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." <br /> - Jamie F.</p>
