@@ -2,8 +2,8 @@ import React from "react";
 
 const ClassModalCard = ({ gym }) => {
   return (
-    <div>
-      <div >
+    <div className="classModalCard">
+      <div className="classCard">
         <h2>{gym.title}</h2>
         <p>{gym.description}</p>
         <p>Duration: {gym.duration}</p>

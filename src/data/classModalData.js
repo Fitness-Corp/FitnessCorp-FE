@@ -5,7 +5,7 @@ const classModalData = [
   {
     id: 1,
     // image
-    title: 'Yoga',
+    title: 'YOGA',
     description: 'Structured, powerful practice that focuses on mastery of poses and progression to more advanced levels.',
     duration: '45 minutes',
     intensity: <><BsCloudyFill /><BsCloudyFill /><BsCloud /></>,
@@ -18,7 +18,7 @@ const classModalData = [
   {
     id: 2,
     // image
-    title: 'Boxing',
+    title: 'BOXING',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
     duration: '60 minutes',
     intensity: <><BsCloudyFill /><BsCloudyFill /><BsCloudyFill /></>,
@@ -31,7 +31,7 @@ const classModalData = [
   {
     id: 3,
     // image
-    title: 'Stretching',
+    title: 'STRETCHING',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     duration: '30 minutes',
     intensity: <><BsCloudyFill /><BsCloud /><BsCloud /></>,
@@ -44,7 +44,7 @@ const classModalData = [
   {
     id: 4,
     // image
-    title: 'Crossfit',
+    title: 'CROSSFIT',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     duration: '60 minutes',
     intensity: <><BsCloudyFill /><BsCloudyFill /><BsCloudyFill /></>,
@@ -57,7 +57,7 @@ const classModalData = [
   {
     id: 5,
     // image
-    title: 'Core',
+    title: 'CORE',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     duration: '45 minutes',
     intensity: <><BsCloudyFill /><BsCloudyFill /><BsCloud /></>,
@@ -70,7 +70,7 @@ const classModalData = [
   {
     id: 6,
     // image
-    title: 'Lifting',
+    title: 'LIFTING',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     duration: '45 minutes',
     intensity: <><BsCloudyFill /><BsCloudyFill /><BsCloudyFill /></>,
