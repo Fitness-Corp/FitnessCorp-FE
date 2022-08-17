@@ -1,7 +1,6 @@
 import React from "react";
 import Popup from "reactjs-popup";
 import '../../App.css';
-import classData from "../../data/classData";
 import classModalData from "../../data/classModalData";
 import ClassModalCard from "./ClassModalCard";
 
