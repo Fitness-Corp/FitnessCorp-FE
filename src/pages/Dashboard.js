@@ -52,6 +52,10 @@ export default function Dashboard() {
         <p>Start date: 8/1/2022 -<br /> End date: 11/1/2022</p>
       </div>
 
+      <div>
+        {/* Weather component */}
+      </div>
+
       <div className='dashboard-progress'>
         <DashboardComponents />
       </div>
@@ -64,7 +68,7 @@ export default function Dashboard() {
         <h3>Fitness Corp</h3>
         <p>Copyright</p>
       </div>
-    </div>
+    </div >
   );
 }
 
