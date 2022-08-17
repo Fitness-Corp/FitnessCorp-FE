@@ -5,7 +5,7 @@ import CircularProgress from './CircularProgress';
 export default function DashboardComponents() {
   return (
     <div>
-      <div className='dashboard-progress'>
+      <div className='progress-component'>
         <div className='weekly-progress'>
           <CircularProgress
             size={100}

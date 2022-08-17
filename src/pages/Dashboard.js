@@ -4,6 +4,7 @@ import { IoNotificationsOutline } from 'react-icons/io5';
 import { RiUserShared2Line } from 'react-icons/ri';
 import Popup from 'reactjs-popup';
 import '../App.css';
+import CalendarDashboard from './CalendarDashboard';
 import DashboardComponents from './DashboardComponents';
 
 
@@ -51,10 +52,18 @@ export default function Dashboard() {
         <p>Start date: 8/1/2022 -<br /> End date: 11/1/2022</p>
       </div>
 
-      <div>
+      <div className='dashboard-progress'>
         <DashboardComponents />
       </div>
 
+      <div className='dashboard-calendar'>
+        <CalendarDashboard />
+      </div>
+
+      <div className='dashboard-footer'>
+        <h3>Fitness Corp</h3>
+        <p>Copyright</p>
+      </div>
     </div>
   );
 }
