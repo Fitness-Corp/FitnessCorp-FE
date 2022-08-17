@@ -46,3 +46,12 @@
   background-color: black;
   color: white;
 }
+
+/* customer dashboard */
+.menu-item {
+  cursor: pointer;
+}
+
+.weekly-progress {
+  width: 10%;
+}
