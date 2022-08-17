@@ -1,7 +1,62 @@
+/* body & imports */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* about us section */
+.aboutUsSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.aboutInfo {
+  width: 30%;
+  padding-left: 2em;
+}
+
+.aboutInfo h2{
+  font-size: 50px;
+}
+
+.aboutData {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.aboutUsBoxes {
+  width: 45%;
+  margin-bottom: 2em;
+}
+
+.aboutBox p {
+  width: 80%;
+}
+
+.aboutBox h3 {
+  font-size: 20px;
+}
+
+.aboutBox img {
+  width: 80%;
+  height: 450px;
+}
+
+.aboutBox img:hover {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+
+}
+
 /* classes */
 .modal {
   font-size: 12px;
-  background-color: black;
+  background-color: red;
   color: white;
 }
 .modal > .header {
@@ -43,7 +98,7 @@
 
 .review  {
   text-align: center;
-  background-color: black;
+  background-color: red;
   color: white;
 }
 
