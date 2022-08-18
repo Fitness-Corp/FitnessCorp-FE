@@ -176,6 +176,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.iconSection h3 {
+  font-size: 25px;
+  color: #c5302e;
+  border-bottom: 1px solid #c5302e;
 }
 
 .iconMap {
@@ -187,7 +194,6 @@ body {
 }
 
 .iconCard {
-  border: 1px solid green;
   font-size: 18px;
   width: 30%;
   text-align: center;
