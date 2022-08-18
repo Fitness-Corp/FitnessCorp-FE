@@ -54,28 +54,108 @@ body {
 }
 
 /* classes */
+.classHeader{
+  height: 220px;
+  background-image: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+	background-position: center ;
+	background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.classHeader h3 {
+  font-size: 50px;
+  padding-left: 1em;
+}
+
+.classData {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.classBoxes1 {
+  margin-bottom: 1.5em;
+  width: 30%;
+}
+
+.classBoxes2 img {
+  width: 90%;
+  height: 330px;
+  cursor: pointer;
+}
+
+.classBoxes2 img:hover {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+}
+
+.classBoxes2 h2 {
+  font-size: 30px;
+}
+
+.classBoxes2 p {
+  color: #B2BAB0;
+}
+
+.classes-button {
+  color: #c5302e;
+  border: none;
+  background-color: black;
+  padding: 0;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* modal for classes */
+.classModalCard{
+  border: 1px solid #c5302e;
+  display: flex;
+}
+
+.classModalCard img{
+  padding: 1em;
+  width: 40%;
+  height: 450px;
+}
+
+.classCard h2 {
+  font-size: 25px;
+}
+
+.classCard button {
+  color: #c5302e;
+  border: 1px solid red;
+  background-color: black;
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.classCard p {
+  color: #B2BAB0;
+  padding-right: 1em;
+}
+
+.classCard span{
+  padding-right: 0.5em;
+}
+
+.popup-content {
+  margin: auto;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+}
+
 .modal {
-  font-size: 12px;
-  background-color: red;
+  background-color: black;
   color: white;
 }
-.modal > .header {
-  width: 100%;
-  border-bottom: 1px solid gray;
-  font-size: 18px;
-  text-align: center;
-  padding: 5px;
-}
-.modal > .content {
-  width: 100%;
-  padding: 10px 5px;
-}
-.modal > .actions {
-  width: 100%;
-  padding: 10px 5px;
-  margin: auto;
-  text-align: center;
-}
+
 .modal > .close {
   cursor: pointer;
   position: absolute;

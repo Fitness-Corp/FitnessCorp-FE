@@ -4,13 +4,15 @@ import ClassBoxes from "./ClassBoxes";
 
 const ClassSection = () => {
   return (
-    <div>
-      <h3>Discover Our Classes</h3>
-      {
-        classData.map((data) => (
+    <div className="classSection">
+      <div className="classHeader">
+        <h3>Discover Our Classes</h3>
+      </div>
+      <div className="classData">
+        {classData.map((data) => (
           <ClassBoxes data={data} key={data.id} />
-        ))
-      }
+        ))}
+      </div>
     </div>
   );
 };
