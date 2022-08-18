@@ -16,7 +16,7 @@ const icons = [
   },
   {
     icon: <BiLineChart />,
-    title: 'Personal Program Analysis'
+    title: 'Personal Program Analytics'
   },
   {
     icon: <FaHeartbeat />,
