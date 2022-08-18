@@ -170,6 +170,35 @@ body {
   border: 1px solid #cfcece;
 }
 
+/* icon section */
+.iconSection {
+  padding: 1.5em 0 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconMap {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.iconCard {
+  border: 1px solid green;
+  font-size: 18px;
+  width: 30%;
+  text-align: center;
+}
+
+.iconCard span {
+  padding-top: 2em;
+  font-size: 30px;
+}
+
+/* carousel reviews */
 .carousel-wrapper {
   max-width: 600px;
   margin: 20px auto;
