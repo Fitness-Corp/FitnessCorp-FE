@@ -14,8 +14,9 @@ export const actions = '';
 
 export const login = (form) => (dispatch) => {
 
-    dispatch(fetchStart());
-    axios.post('https://tv-weather-app-login.herokuapp.com/api/login', form)
+    dispatch(fetchStart())
+    axios.post('https://fitnesscorp.herokuapp.com/api/login', form)
+
         .then(resp => {
             window.localStorage.setItem('login', resp.data.token);
             dispatch(fetchSuccess(form.userName));
@@ -32,8 +33,8 @@ export const logout = () => {
 };
 
 export const register = (form) => (dispatch) => {
-    dispatch(fetchStart());
-    axios.post('https://tv-weather-app-login.herokuapp.com/api/register', form)
+    dispatch(fetchStart())
+    axios.post('https://fitnesscorp.herokuapp.com/api/register', form)
         .then(resp => {
             dispatch(login(form));
         })
@@ -41,6 +42,24 @@ export const register = (form) => (dispatch) => {
             dispatch(fetchFail(err.message));
         });
 };
+
+export const validate = (token) => (dispatch) => {
+    dispatch(fetchStart())
+    console.log(token)
+    const config = {
+        headers: { authorization: token }
+    };
+    // axios.defaults.headers.common = {'Authorization': `bearer ${token}`}
+    axios.post('https://fitnesscorp.herokuapp.com/api/validate', '', config)
+        .then(resp => {
+            dispatch(fetchSuccess(resp.message))
+            console.log(resp)
+        })
+        .catch(err => {
+            console.log(err)
+            dispatch(fetchFail(err.message))
+        })
+}
 
 export const fetchStart = () => {
     return ({ type: FETCH_START });

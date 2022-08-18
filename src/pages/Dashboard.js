@@ -6,9 +6,18 @@ import Popup from 'reactjs-popup';
 import '../App.css';
 import CalendarDashboard from './CalendarDashboard';
 import DashboardComponents from './DashboardComponents';
+import { connect } from 'react-redux';
+import { logout } from '../actions';
+import { useNavigate } from 'react-router';
 
 
-export default function Dashboard() {
+const Dashboard = ({dispatch}) => {
+  const push = useNavigate()
+  const logOut = () => {
+    dispatch(logout())
+    push('/')
+  }
+
   return (
     <div>
       <div className='dashboard-header'>
@@ -41,7 +50,7 @@ export default function Dashboard() {
           on={['hover', 'focus']}
           closeOnDocumentClick
         >
-          <button>Log out</button>
+          <button onClick={logOut}>Log out</button>
         </Popup>
       </div>
 
@@ -72,3 +81,4 @@ export default function Dashboard() {
   );
 }
 
+export default connect()(Dashboard)

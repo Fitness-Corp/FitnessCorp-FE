@@ -3,7 +3,8 @@ import { TOGGLE_LOGIN, FETCH_FAIL, FETCH_START, FETCH_SUCCESS, FORM_ERROR, LOG_O
 export const initialState = {
     loginPop: false,
     loggedIn: false,
-    error: ''
+    error: '',
+    fetching: false,
 }
 
 const reducer = (state= initialState, action)=>{

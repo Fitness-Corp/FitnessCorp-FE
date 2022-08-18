@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import NavBar from './NavBar';
 import SplashLanding from './SplashLanding';
 import AboutUs from './AboutUs';
@@ -7,8 +7,28 @@ import IconSection from './IconSection';
 import MembershipSection from './MembershipSection';
 import Reviews from './Reviews';
 import Footer from './Footer';
+import { useNavigate } from "react-router-dom";
+import { connect } from 'react-redux';
+import { validate } from '../../actions';
 
-export default function LandingPage() {
+
+const LandingPage = ({loggedIn, fetching, dispatch}) => {
+
+      const push = useNavigate()
+
+      useEffect(() => {
+        if(!loggedIn && localStorage.getItem('login')){
+            dispatch(validate(localStorage.getItem('login')))
+        }
+    }, [])
+      useEffect(() => {
+        if(loggedIn){
+          push('/dashboard')
+        }
+      }, [loggedIn])
+
+
+
   return (
     <div>
       <div className="App">
@@ -24,3 +44,14 @@ export default function LandingPage() {
     </div>
   );
 }
+
+
+const mapState = (state) => {
+    return {
+      fetching: state.fetching,
+      loggedIn: state.loggedIn,
+  }
+}
+
+
+export default connect(mapState)(LandingPage)
