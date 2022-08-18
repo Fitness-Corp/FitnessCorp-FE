@@ -31,28 +31,27 @@ const ClassBoxes = ({ data }) => {
         </Popup>
         <h2>{data.title}</h2>
         <p>{data.description}</p>
+        <Popup
+          trigger={<button className="classes-button">LEARN MORE</button>}
+          modal
+          nested
+        >
+          {close => (
+            <div className="modal">
+              <button className="close" onClick={close}>
+                &times;
+              </button>
+              {
+                classModalData.map(function (gym) {
+                  if (gym.id === data.id) {
+                    return <ClassModalCard gym={gym} key={gym.title} />;
+                  }
+                })
+              }
+            </div>
+          )}
+        </Popup>
       </div>
-      <Popup
-        trigger={<button className="classes-button">LEARN MORE</button>}
-        modal
-        nested
-      >
-        {close => (
-          <div className="modal">
-            <button className="close" onClick={close}>
-              &times;
-            </button>
-            {
-              classModalData.map(function (gym) {
-                if (gym.id === data.id) {
-                  return <ClassModalCard gym={gym} key={gym.title} />;
-                }
-              })
-            }
-            <button>Checkout</button>
-          </div>
-        )}
-      </Popup>
     </div>
   );
 };
