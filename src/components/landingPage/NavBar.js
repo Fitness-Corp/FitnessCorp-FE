@@ -10,22 +10,24 @@ import axios from "axios";
 const NavBar = ({ loggedIn, dispatch }) => {
 
     const toggleLoginButton = () => {
+
         dispatch(toggleLogin())
     }
     const logOut = () => {
         dispatch(logout())
     }
-    useEffect(() => {
-        if(!loggedIn && localStorage.getItem('login')){
-            axios.post()
-        }
-    }, [])
+    // useEffect(() => {
+    //     if(!loggedIn && localStorage.getItem('login')){
+    //         axios.post()
+    //     }
+    // }, [])
     return (
         <div>
-            <Link to= '/classes'>Classes</Link><Link to= './about'>About</Link><Link to= '/mebership'>Membership</Link><Link to= '/contact'>Contact</Link>{loggedIn ? <button onClick={logOut}>Log Out</button> : <button onClick={toggleLoginButton}>Login</button>}
+            <Link to= '/classes'>Classes</Link><Link to= '/about'>About</Link><Link to= '/mebership'>Membership</Link><Link to= '/contact'>Contact</Link>{loggedIn ? <button onClick={logOut}>Log Out</button> : <button onClick={toggleLoginButton}>Login</button>}
+
         </div>
-    )
-}
+    );
+};
 
 
 const mapState = (state) => {
@@ -34,4 +36,6 @@ const mapState = (state) => {
     }
 }
 
+
 export default connect(mapState)(NavBar)
+

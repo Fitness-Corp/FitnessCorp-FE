@@ -1,19 +1,45 @@
 import React from 'react';
+import membershipData from '../../data/membershipData';
+import Popup from 'reactjs-popup';
+import membershipModalData from '../../data/membershipModalData';
+import MembershipModalCard from './MembershipModalCard';
 
 export default function MembershipSection() {
   return (
     <div>
       <h3>Choose Your Membership</h3>
+      <p>One Membership at a Time</p>
       <div>
-        <h4>3 Months</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button>Learn More</button>
-        <h4>10 Classes</h4>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button>Learn More</button>
-        <h4>Single Drop-In</h4>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <button>Learn More</button>
+        {
+          membershipData.map((m) => (
+            <div key={m.id}>
+              <h3>{m.name}</h3>
+              <p>{m.bio}</p>
+              <Popup
+                trigger={<button className="button"> Learn More </button>}
+                modal
+                nested
+              >
+                {close => (
+                  <div className="modal">
+                    <button className="close" onClick={close}>
+                      &times;
+                    </button>
+                    {
+                      membershipModalData.map((m2) => {
+                        if (m.id === m2.id) {
+                          return <MembershipModalCard m2={m2} key={m2.price} />;
+                        }
+                      })
+                    }
+                    <button>Checkout</button>
+                  </div>
+                )}
+              </Popup>
+            </div>
+
+          ))
+        }
       </div>
     </div>
   );
