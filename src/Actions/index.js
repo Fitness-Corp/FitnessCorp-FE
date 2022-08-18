@@ -43,6 +43,24 @@ export const register = (form) => (dispatch) => {
         });
 };
 
+export const validate = (token) => (dispatch) => {
+    dispatch(fetchStart())
+    console.log(token)
+    const config = {
+        headers: { authorization: token }
+    };
+    // axios.defaults.headers.common = {'Authorization': `bearer ${token}`}
+    axios.post('https://fitnesscorp.herokuapp.com/api/validate', '', config)
+        .then(resp => {
+            dispatch(fetchSuccess(resp.message))
+            console.log(resp)
+        })
+        .catch(err => {
+            console.log(err)
+            dispatch(fetchFail(err.message))
+        })
+}
+
 export const fetchStart = () => {
     return ({ type: FETCH_START });
 };
