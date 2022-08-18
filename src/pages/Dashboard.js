@@ -52,7 +52,7 @@ export default function Dashboard() {
         <p>Start date: 8/1/2022 -<br /> End date: 11/1/2022</p>
       </div>
 
-      <div>
+      <div className='dashboard-weather'>
         {/* Weather component */}
       </div>
 
