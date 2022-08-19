@@ -220,7 +220,7 @@ body {
   flex-direction: column;
 }
 
-.membership-section h3 {
+.membership-section h3, .reviewSection h3  {
   font-size: 30px;
   color: #c5302e;
 }
@@ -289,7 +289,15 @@ body {
 }
 
 /* carousel reviews */
+.reviewSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .carousel-wrapper {
+  background-color: #c5302e;
   max-width: 600px;
   margin: 20px auto;
   padding: 0 20px
@@ -297,8 +305,7 @@ body {
 
 .review  {
   text-align: center;
-  background-color: red;
-  color: white;
+  padding: 1.5em;
 }
 
 /* customer dashboard */
