@@ -3,8 +3,8 @@ import CarouselReviews from './CarouselReviews';
 
 export default function Reviews() {
   return (
-    <div>
-      <h3>What People Are Saying</h3>
+    <div className='reviewSection'>
+      <h3>TESTIMONIALS</h3>
       <CarouselReviews />
     </div>
   );
