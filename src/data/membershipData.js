@@ -1,17 +1,17 @@
 const membershipData = [
   {
     id: 1,
-    name: '3 Months',
+    name: '3 MONTHS',
     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     id: 2,
-    name: '10 Classes',
+    name: '10 CLASSES',
     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     id: 3,
-    name: 'Single Drop-In',
+    name: 'SINGLE DROP-IN',
     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
 ];

@@ -6,17 +6,19 @@ import MembershipModalCard from './MembershipModalCard';
 
 export default function MembershipSection() {
   return (
-    <div>
-      <h3>Choose Your Membership</h3>
-      <p>One Membership at a Time</p>
-      <div>
+    <div className='membership-section'>
+      <h3>CHOOSE YOUR MEMBERSHIP</h3>
+      <p>ONE MEMBERSHIP ALLOWED AT A TIME</p>
+      <div className='membership-info'>
         {
           membershipData.map((m) => (
-            <div key={m.id}>
-              <h3>{m.name}</h3>
-              <p>{m.bio}</p>
+            <div key={m.id} className='membership-map'>
+              <div className='membership-title'>
+                <h4>{m.name}</h4>
+                <p>{m.bio}</p>
+              </div>
               <Popup
-                trigger={<button className="button"> Learn More </button>}
+                trigger={<button className="button"> LEARN MORE </button>}
                 modal
                 nested
               >
@@ -32,7 +34,6 @@ export default function MembershipSection() {
                         }
                       })
                     }
-                    <button>Checkout</button>
                   </div>
                 )}
               </Popup>
