@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <div className='footer-section'>
+    <div className='footer-section' id='contact'>
       <div className='title-icons'>
         <h3>Fitness Corp</h3>
         <span>

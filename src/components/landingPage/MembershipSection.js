@@ -6,7 +6,7 @@ import MembershipModalCard from './MembershipModalCard';
 
 export default function MembershipSection() {
   return (
-    <div className='membership-section'>
+    <div className='membership-section' id='membership'>
       <h3>CHOOSE YOUR MEMBERSHIP</h3>
       <p>ONE MEMBERSHIP ALLOWED AT A TIME</p>
       <div className='membership-info'>

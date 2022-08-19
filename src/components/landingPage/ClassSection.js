@@ -4,7 +4,7 @@ import ClassBoxes from "./ClassBoxes";
 
 const ClassSection = () => {
   return (
-    <div className="classSection">
+    <div className="classSection" id="classes">
       <div className="classHeader">
         <h3>Discover Our Classes</h3>
       </div>
