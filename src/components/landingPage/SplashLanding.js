@@ -1,20 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import LoginPopUp from "../LoginPopUp";
+import NavBar from "./NavBar";
 
 
 
 const SplashLanding = ({ loginPop }) => {
-    const navigate = useNavigate();
-
-
     return (
-        <div>
-            <img src="" alt="Small Logo" />
-            <h2>GET<br />FIT<br />WITH<br />US</h2>
-            <button onClick={() => navigate("/dashboard")}>Button</button>
-            {loginPop ? <><LoginPopUp /></> : ''}
+        <div className="splashLanding">
+            <div className="homePage">
+                <NavBar />
+                <h1>GET<br />FIT<br />WITH<br />US</h1>
+                {loginPop ? <><LoginPopUp /></> : ''}
+            </div>
         </div>
     );
 };

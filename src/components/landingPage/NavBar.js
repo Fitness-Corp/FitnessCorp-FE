@@ -1,9 +1,7 @@
-import React, {useEffect} from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { connect } from "react-redux";
 import { toggleLogin } from "../../actions";
 import { logout } from "../../actions";
-import axios from "axios";
 
 
 
@@ -11,16 +9,22 @@ const NavBar = ({ loggedIn, dispatch }) => {
 
     const toggleLoginButton = () => {
 
-        dispatch(toggleLogin())
-    }
+        dispatch(toggleLogin());
+    };
     const logOut = () => {
-        dispatch(logout())
-    }
+        dispatch(logout());
+    };
 
     return (
-        <div>
-            <Link to= '/classes'>Classes</Link><Link to= '/about'>About</Link><Link to= '/mebership'>Membership</Link><Link to= '/contact'>Contact</Link>{loggedIn ? <button onClick={logOut}>Log Out</button> : <button onClick={toggleLoginButton}>Login</button>}
-
+        <div className="navBar">
+            <h2>Fitness Corp</h2>
+            <nav>
+                <a href="#about">ABOUT</a>
+                <a href="#classes">CLASSES</a>
+                <a href="#membership">MEMBERSHIP</a>
+                <a href="#contact">CONTACT</a>
+                {loggedIn ? <button onClick={logOut}>LOG OUT</button> : <button onClick={toggleLoginButton}>LOG IN</button>}
+            </nav>
         </div>
     );
 };
@@ -29,9 +33,9 @@ const NavBar = ({ loggedIn, dispatch }) => {
 const mapState = (state) => {
     return {
         loggedIn: state.loggedIn
-    }
-}
+    };
+};
 
 
-export default connect(mapState)(NavBar)
+export default connect(mapState)(NavBar);
 
