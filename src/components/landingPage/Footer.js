@@ -3,6 +3,12 @@ import { BsClock, BsFacebook, BsInstagram, BsPhone, BsTwitter, BsYoutube } from 
 import { GoLocation } from 'react-icons/go';
 
 export default function Footer() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Thanks for checking out Fitness Corp!');
+    e.target.reset();
+  };
+
   return (
     <div className='footer-section'>
       <div className='title-icons'>
@@ -50,13 +56,13 @@ export default function Footer() {
       <div className='subscription'>
         <h4>SUBSCRIBE</h4>
         <p>Receive messages for classes, events and everything else!</p>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input
             placeholder='Subscribe Now'
             type='email'
             name='email'
           />
-          <button onClick={() => alert('Thanks for checking out Fitness Corp!')}>SUBSCRIBE</button>
+          <button>SUBSCRIBE</button>
         </form>
       </div>
     </div>
