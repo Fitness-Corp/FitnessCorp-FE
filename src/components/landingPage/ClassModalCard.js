@@ -11,7 +11,7 @@ const ClassModalCard = ({ gym }) => {
         <p>{gym.description}</p>
         <h3>Duration: {gym.duration}</h3>
         <h3>Intensity: {gym.intensity}</h3>
-        <button onClick={() => alert('Currently working on checkout system.')}>Checkout</button>
+        <button onClick={() => alert('Currently working on checkout system.')}>CHECKOUT</button>
         <h3>What you need to know before the class:</h3>
         <p><span><BsClock /></span>{gym.firstText}</p>
         <p><span><GiWaterDrop /></span>{gym.secondText}</p>

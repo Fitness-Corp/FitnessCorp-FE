@@ -114,6 +114,7 @@ body {
 .classModalCard{
   border: 1px solid #c5302e;
   display: flex;
+  background-color: black;
 }
 
 .classModalCard img{
@@ -126,7 +127,7 @@ body {
   font-size: 25px;
 }
 
-.classCard button {
+.classCard button, .membershipModalCard button {
   color: #c5302e;
   border: 1px solid red;
   background-color: black;
@@ -148,7 +149,10 @@ body {
 .popup-content {
   margin: auto;
   width: 50%;
-  background-color: rgb(255, 255, 255);
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.6)
 }
 
 .modal {
@@ -165,7 +169,6 @@ body {
   right: -10px;
   top: -10px;
   font-size: 24px;
-  background: #ffffff;
   border-radius: 18px;
   border: 1px solid #cfcece;
 }
@@ -173,6 +176,7 @@ body {
 /* icon section */
 .iconSection {
   padding: 1.5em 0 1em 0;
+  margin-bottom: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,6 +206,86 @@ body {
 .iconCard span {
   padding-top: 2em;
   font-size: 30px;
+}
+
+/* membership section */
+.membership-section {
+  background-image: url('https://images.unsplash.com/photo-1603665409265-bdc00027c217?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80');
+  background-size: cover;
+	background-position: top ;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.membership-section h3 {
+  font-size: 30px;
+  color: #c5302e;
+}
+
+.membership-info {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-map {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #c5302e;
+}
+
+.membership-map h4 {
+  font-size: 22px;
+}
+
+.membership-map p, .membershipModalCard p {
+  color: #B2BAB0;
+}
+
+.membership-title {
+  width: 65%;
+}
+
+.button{
+  cursor: pointer;
+  background-color: transparent;
+  color: #c5302e;
+  border: 1px solid #c5302e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 15%;
+  height: 30px;
+}
+
+/* MODAL MEMBERSHIP */
+.membershipModalCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.membershipModalCard h3, .membershipModalCard span {
+  font-size: 25px;
+  color: #c5302e;
+}
+
+.membershipModalCard img {
+  width: 40%;
+}
+
+.membershipModalCard p {
+  text-align: center;
+  width: 60%;
 }
 
 /* carousel reviews */
