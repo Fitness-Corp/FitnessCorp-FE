@@ -8,6 +8,39 @@ body {
 }
 
 /* homepage */
+.splashLanding {
+  margin-bottom: 3em;
+  height: 500px;
+  background-image: url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80');
+  background-size: cover;
+	background-position: center ;
+  background-repeat: no-repeat;
+}
+
+.homePage h1 {
+  font-size: 55px;
+  margin-left: 1em;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+  margin-right: 1em;
+}
+
+.navBar button {
+  background-color: transparent;
+  color: #c5302e;
+  border: 2px solid #c5302e;
+  padding: 0.8em;
+  font-weight: 750;
+}
 
 /* about us section */
 .aboutUsSection {
@@ -177,7 +210,8 @@ body {
 
 /* icon section */
 .iconSection {
-  padding: 1.5em 0 1em 0;
+  padding: 2em 0 1em 0;
+  margin-top: 1em;
   margin-bottom: 2em;
   display: flex;
   justify-content: center;
@@ -185,13 +219,9 @@ body {
   flex-direction: column;
 }
 
-.iconSection h3 {
-  font-size: 25px;
-  color: #c5302e;
-  border-bottom: 1px solid #c5302e;
-}
-
 .iconMap {
+  border-bottom: 1px solid #c5302e;
+  border-top: 1px solid #c5302e;
   width: 70%;
   display: flex;
   justify-content: space-between;

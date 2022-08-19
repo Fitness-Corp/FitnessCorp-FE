@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { connect } from "react-redux";
 import { toggleLogin } from "../../actions";
 import { logout } from "../../actions";
-import axios from "axios";
 
 
 
@@ -18,14 +16,14 @@ const NavBar = ({ loggedIn, dispatch }) => {
     };
 
     return (
-        <div className="splashLanding">
-            <h3>Fitness Corp</h3>
+        <div className="navBar">
+            <h2>Fitness Corp</h2>
             <nav>
                 <a href="#about">ABOUT</a>
                 <a href="#classes">CLASSES</a>
                 <a href="#membership">MEMBERSHIP</a>
                 <a href="#contact">CONTACT</a>
-                {loggedIn ? <button onClick={logOut}>Log Out</button> : <button onClick={toggleLoginButton}>Login</button>}
+                {loggedIn ? <button onClick={logOut}>LOG OUT</button> : <button onClick={toggleLoginButton}>LOG IN</button>}
             </nav>
         </div>
     );
