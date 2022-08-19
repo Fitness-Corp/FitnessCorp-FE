@@ -30,7 +30,7 @@ export default function CarouselReviews() {
 
         <div className='review'>
           <span><AiFillStar /><AiFillStar /><AiFillStar /><AiFillStar /><AiFillStar /></span>
-          <p>"I was hesitant on going to Fitness Corp, I pass by their gym all of the time since I live near by. I decided to do my research and look up their site, boy was I in for a treat! 🤩 Their website was desktop friendly and I was able to register and access the classes in no time. Their website convinced me to join and I was finally able to go into Fitness Corp! The staff are super friendly and the gym has such a great environment plus it was spotless. I'm going to recommend Fitness Corp to my friends and family. #gainz #AwesomeSite"</p>
+          <p>"I was hesitant on going to Fitness Corp, I pass by their gym all of the time since I live near by. I decided to do my research and look up their site, boy was I in for a treat! 🤩 Their website was desktop friendly and I was able to register and access the classes in no time. Their website convinced me to join and I was finally able to go into Fitness Corp! I'm going to recommend Fitness Corp to my friends and family. #gainz #AwesomeSite"</p>
           <p>Bob B.</p>
         </div>
 

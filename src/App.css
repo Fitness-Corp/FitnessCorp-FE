@@ -241,11 +241,11 @@ body {
   border-bottom: 1px solid #c5302e;
 }
 
-.membership-map h4 {
+.membership-map h4, .contact-section span {
   font-size: 22px;
 }
 
-.membership-map p, .membershipModalCard p {
+.membership-map p, .membershipModalCard p, .subscription p {
   color: #B2BAB0;
 }
 
@@ -253,7 +253,7 @@ body {
   width: 65%;
 }
 
-.button{
+.button {
   cursor: pointer;
   background-color: transparent;
   color: #c5302e;
@@ -307,6 +307,40 @@ body {
   text-align: center;
   padding: 1.5em;
 }
+
+/* footer section */
+.footer-section {
+  margin-top: 3em;
+  border-top: 1px solid #B2BAB0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-icons {
+  padding: 1em;
+  font-size: 20px;
+}
+
+.title-icons span {
+  padding-right: 1em;
+}
+
+.contact-section {
+  width: 15%;
+  height: 150px;
+  text-align: center;
+}
+
+.subscription {
+  padding: 1em;
+}
+
+.subscription button {
+  background-color: transparent;
+  color: #c5302e;
+}
+
 
 /* customer dashboard */
 .menu-item {
