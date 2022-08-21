@@ -1,16 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import LoginPopUp from "../LoginPopUp";
-import NavBar from "./NavBar";
+import '../../App.css';
 
-
-
-const SplashLanding = ({ loginPop }) => {
+const SplashLanding = ({ loginPop, loggedIn, dispatch }) => {
     return (
         <div className="splashLanding">
             <div className="homePage">
-                <NavBar />
-                <h1>GET<br />FIT<br />WITH<br />US</h1>
+                <h1>GET FIT<br />WITH US</h1>
                 {loginPop ? <><LoginPopUp /></> : ''}
             </div>
         </div>

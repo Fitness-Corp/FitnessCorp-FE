@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { toggleLogin } from "../../actions";
 import { logout } from "../../actions";
-
+import '../../App.css';
 
 
 const NavBar = ({ loggedIn, dispatch }) => {
@@ -17,14 +17,16 @@ const NavBar = ({ loggedIn, dispatch }) => {
 
     return (
         <div className="navBar">
-            <h2>Fitness Corp</h2>
-            <nav>
-                <a href="#about">ABOUT</a>
-                <a href="#classes">CLASSES</a>
-                <a href="#membership">MEMBERSHIP</a>
-                <a href="#contact">CONTACT</a>
-                {loggedIn ? <button onClick={logOut}>LOG OUT</button> : <button onClick={toggleLoginButton}>LOG IN</button>}
-            </nav>
+            <div className="test">
+                <h2>Fitness Corp</h2>
+                <nav>
+                    <a href="#about">ABOUT</a>
+                    <a href="#classes">CLASSES</a>
+                    <a href="#membership">MEMBERSHIP</a>
+                    <a href="#contact">CONTACT</a>
+                    {loggedIn ? <button onClick={logOut}>LOG OUT</button> : <button onClick={toggleLoginButton}>LOG IN</button>}
+                </nav>
+            </div>
         </div>
     );
 };
