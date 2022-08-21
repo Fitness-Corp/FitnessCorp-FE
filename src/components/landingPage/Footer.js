@@ -58,7 +58,7 @@ export default function Footer() {
         <p>Receive messages for classes, events and everything else!</p>
         <form onSubmit={handleSubmit}>
           <input
-            placeholder='Subscribe Now'
+            placeholder='your@email.com'
             type='email'
             name='email'
           />

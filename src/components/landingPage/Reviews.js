@@ -4,7 +4,7 @@ import CarouselReviews from './CarouselReviews';
 export default function Reviews() {
   return (
     <div className='reviewSection'>
-      <h3>TESTIMONIALS</h3>
+      <h3>REVIEWS</h3>
       <CarouselReviews />
     </div>
   );
