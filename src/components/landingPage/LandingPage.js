@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react';
-import NavBar from './NavBar';
+import React, { useEffect } from 'react';
 import SplashLanding from './SplashLanding';
 import AboutUs from './AboutUs';
 import ClassSection from './ClassSection';
@@ -10,22 +9,23 @@ import Footer from './Footer';
 import { useNavigate } from "react-router-dom";
 import { connect } from 'react-redux';
 import { validate } from '../../actions';
+import NavBar from './NavBar';
 
 
-const LandingPage = ({loggedIn, fetching, dispatch}) => {
+const LandingPage = ({ loggedIn, fetching, dispatch }) => {
 
-      const push = useNavigate()
+  const push = useNavigate();
 
-      useEffect(() => {
-        if(!loggedIn && localStorage.getItem('login')){
-            dispatch(validate(localStorage.getItem('login')))
-        }
-    }, [])
-      useEffect(() => {
-        if(loggedIn){
-          push('/dashboard')
-        }
-      }, [loggedIn])
+  useEffect(() => {
+    if (!loggedIn && localStorage.getItem('login')) {
+      dispatch(validate(localStorage.getItem('login')));
+    }
+  }, []);
+  useEffect(() => {
+    if (loggedIn) {
+      push('/dashboard');
+    }
+  }, [loggedIn]);
 
 
 
@@ -43,15 +43,15 @@ const LandingPage = ({loggedIn, fetching, dispatch}) => {
       </div>
     </div>
   );
-}
+};
 
 
 const mapState = (state) => {
-    return {
-      fetching: state.fetching,
-      loggedIn: state.loggedIn,
-  }
-}
+  return {
+    fetching: state.fetching,
+    loggedIn: state.loggedIn,
+  };
+};
 
 
-export default connect(mapState)(LandingPage)
+export default connect(mapState)(LandingPage);

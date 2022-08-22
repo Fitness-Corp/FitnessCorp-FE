@@ -6,13 +6,13 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 export default function CalendarDashboard() {
   const utc = new Date().toISOString().slice(0, 10);
   return (
-    <div>
+    <div className='calendar'>
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
-        events={[ //axios call map to here for events
-          { title: 'event 1', date: utc },
-          { title: 'event 2', date: '2022-08-09' }
+        events={[
+          { title: 'Yoga Class', date: utc },
+          { title: 'Boxing Class', date: '2022-08-09' }
         ]}
       />
     </div>
