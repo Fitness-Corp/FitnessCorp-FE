@@ -1,12 +1,10 @@
 import React from "react";
-import { connect } from "react-redux";
-import LoginPopUp from "../LoginPopUp";
 import '../../App.css';
 import workout from '../../assets/workout.mp4';
 import { FaSpotify } from 'react-icons/fa';
 
 
-const SplashLanding = ({ loginPop, loggedIn, dispatch }) => {
+const SplashLanding = () => {
     const openInNewTab = url => {
         window.open(url, '_blank', 'noopener,noreferrer');
     };
@@ -15,7 +13,7 @@ const SplashLanding = ({ loginPop, loggedIn, dispatch }) => {
             <video src={workout} autoPlay loop muted id="video" />
             <div className="homePage">
                 <h1>GET FIT<br />WITH US</h1>
-                {loginPop ? <><LoginPopUp /></> : ''}
+
                 <button onClick={() => openInNewTab('https://open.spotify.com/playlist/7DaNB3xvJ4F96C66mQgmpS?si=8f7c3a75926946bd')}><span><FaSpotify /></span>CHECK OUR PLAYLIST</button>
             </div>
 
@@ -23,11 +21,6 @@ const SplashLanding = ({ loginPop, loggedIn, dispatch }) => {
     );
 };
 
-const mapState = state => {
-    return {
-        loginPop: state.loginPop
-    };
-};
 
 
-export default connect(mapState)(SplashLanding);
+export default SplashLanding;

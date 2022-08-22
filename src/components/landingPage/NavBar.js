@@ -1,20 +1,11 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
-import { toggleLogin } from "../../actions";
-import { logout } from "../../actions";
+import LoginPopUp from "../LoginPopUp";
 import '../../App.css';
 import { AiOutlineClose, AiOutlineShoppingCart } from 'react-icons/ai';
 import Checkout from "./Checkout";
+import Popup from "reactjs-popup";
 
-const NavBar = ({ loggedIn, dispatch }) => {
-
-    const toggleLoginButton = () => {
-
-        dispatch(toggleLogin());
-    };
-    const logOut = () => {
-        dispatch(logout());
-    };
+const NavBar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const handleOpen = () => {
@@ -43,7 +34,20 @@ const NavBar = ({ loggedIn, dispatch }) => {
                         </ul>
                     </nav>
 
-                    {loggedIn ? <button onClick={logOut}>LOG OUT</button> : <button onClick={toggleLoginButton}>LOG IN</button>}
+                    <Popup
+                        trigger={<button>LOG IN</button>}
+                        modal
+                        nested
+                    >
+                        {close => (
+                            <div className="modal">
+                                <button className="close" onClick={close}>
+                                    &times;
+                                </button>
+                                <LoginPopUp />
+                            </div>
+                        )}
+                    </Popup>
                 </nav>
             </div>
         </div>
@@ -51,12 +55,6 @@ const NavBar = ({ loggedIn, dispatch }) => {
 };
 
 
-const mapState = (state) => {
-    return {
-        loggedIn: state.loggedIn
-    };
-};
 
-
-export default connect(mapState)(NavBar);
+export default NavBar;
 
