@@ -1,11 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import CheckOutItem from './CheckOutItemCards';
 
-export default function Checkout() {
+const Checkout = ({cart}) =>  {
   return (
     <div className="cart">
-      <h2>Checkout Items</h2>
-      <h3>Total Amount: $</h3>
+      {cart.cartItems.map((item, idx) => {
+        return (
+          <CheckOutItem key={item.key} item={item}/>
+        )
+      })}
+      <h3>Total Amount: ${cart.totalAmount}</h3>
       <button onClick={() => alert('No checkout yet')}>Checkout</button>
     </div >
   );
 }
+
+const mapState = (state) => {
+  return {
+    cart: state.cart
+  }
+}
+
+export default connect(mapState)(Checkout)

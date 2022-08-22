@@ -6,7 +6,7 @@ import '../../App.css';
 import { AiOutlineClose, AiOutlineShoppingCart } from 'react-icons/ai';
 import Checkout from "./Checkout";
 
-const NavBar = ({ loggedIn, dispatch }) => {
+const NavBar = ({ cart, loggedIn, dispatch }) => {
 
     const toggleLoginButton = () => {
 
@@ -20,6 +20,7 @@ const NavBar = ({ loggedIn, dispatch }) => {
     const handleOpen = () => {
         setMenuOpen(!menuOpen);
     };
+    
 
     return (
         <div className="navBar">
@@ -32,7 +33,7 @@ const NavBar = ({ loggedIn, dispatch }) => {
                     <a href="#contact">CONTACT</a>
 
                     <span className="menu-bars">
-                        <AiOutlineShoppingCart onClick={handleOpen} />
+                        <AiOutlineShoppingCart onClick={handleOpen} />({cart.quantity})
                     </span>
                     <nav className={menuOpen ? 'nav-menu active' : 'nav-menu'}>
                         <ul className='nav-menu-items' onClick={handleOpen}>
@@ -53,7 +54,8 @@ const NavBar = ({ loggedIn, dispatch }) => {
 
 const mapState = (state) => {
     return {
-        loggedIn: state.loggedIn
+        loggedIn: state.loggedIn,
+        cart: state.cart
     };
 };
 
