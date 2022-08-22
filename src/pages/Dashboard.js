@@ -1,5 +1,4 @@
 import React from 'react';
-import { GiMagnifyingGlass } from 'react-icons/gi';
 import { IoNotificationsOutline } from 'react-icons/io5';
 import { RiUserShared2Line } from 'react-icons/ri';
 import Popup from 'reactjs-popup';
@@ -11,54 +10,50 @@ import { logout } from '../actions';
 import { useNavigate } from 'react-router';
 
 
-const Dashboard = ({dispatch}) => {
-  const push = useNavigate()
+const Dashboard = ({ dispatch }) => {
+  const push = useNavigate();
   const logOut = () => {
-    dispatch(logout())
-    push('/')
-  }
+    dispatch(logout());
+    push('/');
+  };
 
   return (
-    <div>
+    <div className='dashboard'>
       <div className='dashboard-header'>
         <h2>Fitness Corp</h2>
-        <input
-          type='search'
-          placeholder='Search'
-        />
-        <button><GiMagnifyingGlass /></button>
-        <Popup
-          trigger={<button className="menu-item"><IoNotificationsOutline /></button>}
-          position="bottom left"
-          on="hover"
-          closeOnDocumentClick
-          mouseLeaveDelay={300}
-          mouseEnterDelay={0}
-          arrow={false}
-        >
-          <div className="menu">
-            <div className="menu-item"> item 1</div>
-            <div className="menu-item"> item 2</div>
-            <div className="menu-item"> item 3</div>
-          </div>
-        </Popup>
-        <Popup
-          trigger={
-            <button><RiUserShared2Line /></button>
-          }
-          position="bottom left"
-          on={['hover', 'focus']}
-          closeOnDocumentClick
-        >
-          <button onClick={logOut}>Log out</button>
-        </Popup>
+        <div className='dash-popup'>
+          <Popup
+            trigger={<button className="notif-item"><IoNotificationsOutline /></button>}
+            position="bottom left"
+            on="hover"
+            closeOnDocumentClick
+            mouseLeaveDelay={300}
+            mouseEnterDelay={0}
+            arrow={true}
+          >
+            <div className="menu">
+              <div className="menu-item">Checkout your stats below!</div>
+              <div className="menu-item"> Sign up for more classes</div>
+            </div>
+          </Popup>
+          <Popup
+            trigger={
+              <button><RiUserShared2Line /></button>
+            }
+            position="bottom left"
+            on={['hover', 'focus']}
+            closeOnDocumentClick
+          >
+            <button className="logout" onClick={logOut}>LOG OUT</button>
+          </Popup>
+        </div>
       </div>
 
       <div className='dashboard-membership'>
-        <h4>Membership:</h4>
-        <p>3 Months</p>
+        <h4>MEMBERSHIP:</h4>
+        <p>3 MONTHS</p>
         <p>$199.99</p>
-        <p>Start date: 8/1/2022 -<br /> End date: 11/1/2022</p>
+        <p>START DATE: 8/1/2022 - END DATE: 11/1/2022</p>
       </div>
 
       <div className='dashboard-weather'>
@@ -79,6 +74,6 @@ const Dashboard = ({dispatch}) => {
       </div>
     </div >
   );
-}
+};
 
-export default connect()(Dashboard)
+export default connect()(Dashboard);

@@ -31,13 +31,13 @@ const CircularProgress = ({ size, strokeWidth, percentage, color }) => {
         transform={`rotate(-90 ${size / 2} ${size / 2})`}
         strokeDasharray={[dash, circumference - dash]}
         strokeLinecap="round"
-        style={{ transition: "all 0.5s" }}
+        style={{ transition: "all 0.8s" }}
       />
       <text
-        fill="black"
+        fill="white"
         fontSize="20px"
         x="50%"
-        y="50%"
+        y="40%"
         dy="20px"
         textAnchor="middle"
       >

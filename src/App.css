@@ -366,7 +366,7 @@ body {
 
 /* carousel reviews */
 .reviewSection {
-  margin: 3em 0;
+  margin: 4em 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,7 +387,7 @@ body {
 
 /* footer section */
 .footer-section {
-  margin-top: 5em;
+  margin-top: 7em;
   padding: 2em;
   border-top: 1px solid #B2BAB0;
   display: flex;
@@ -424,12 +424,63 @@ body {
   padding: 0.5em;
 }
 
-
 /* customer dashboard */
-.menu-item {
-  cursor: pointer;
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2em;
 }
 
-.weekly-progress {
-  width: 10%;
+.dash-popup button {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 2em;
+  border-color: #c5302e;
+  border-radius: 10px;
+  color: white;
+  background-color: transparent;
+}
+
+.menu-item {
+  padding: 1em;
+  width: 15%;
+  color: #B2BAB0;
+  border-bottom: 1px solid #c5302e;
+  background-color: #191919;
+}
+
+.logout {
+  cursor: pointer;
+  background-color: #c5302e;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+.dashboard-membership {
+  color: #c5302e;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.dashboard-progress {
+  display: flex;
+}
+
+.progress-component {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 4em 0;
+}
+
+.dashboard-footer {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
