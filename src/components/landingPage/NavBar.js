@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { toggleLogin } from "../../actions";
 import { logout } from "../../actions";
 import '../../App.css';
-
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const NavBar = ({ loggedIn, dispatch }) => {
 
@@ -24,6 +24,7 @@ const NavBar = ({ loggedIn, dispatch }) => {
                     <a href="#classes">CLASSES</a>
                     <a href="#membership">MEMBERSHIP</a>
                     <a href="#contact">CONTACT</a>
+                    <span className="shopping-cart"><AiOutlineShoppingCart /></span>
                     {loggedIn ? <button onClick={logOut}>LOG OUT</button> : <button onClick={toggleLoginButton}>LOG IN</button>}
                 </nav>
             </div>
