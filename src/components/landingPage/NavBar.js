@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { toggleLogin } from "../../actions";
 import { logout } from "../../actions";
 import '../../App.css';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineShoppingCart } from 'react-icons/ai';
+import Checkout from "./Checkout";
 
 const NavBar = ({ loggedIn, dispatch }) => {
 
@@ -15,6 +16,11 @@ const NavBar = ({ loggedIn, dispatch }) => {
         dispatch(logout());
     };
 
+    const [menuOpen, setMenuOpen] = useState(false);
+    const handleOpen = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <div className="navBar">
             <div className="test">
@@ -24,7 +30,19 @@ const NavBar = ({ loggedIn, dispatch }) => {
                     <a href="#classes">CLASSES</a>
                     <a href="#membership">MEMBERSHIP</a>
                     <a href="#contact">CONTACT</a>
-                    <span className="shopping-cart"><AiOutlineShoppingCart /></span>
+
+                    <span className="menu-bars">
+                        <AiOutlineShoppingCart onClick={handleOpen} />
+                    </span>
+                    <nav className={menuOpen ? 'nav-menu active' : 'nav-menu'}>
+                        <ul className='nav-menu-items' onClick={handleOpen}>
+                            <li className='navbar-toggle'>
+                                <AiOutlineClose />
+                            </li>
+                            <Checkout />
+                        </ul>
+                    </nav>
+
                     {loggedIn ? <button onClick={logOut}>LOG OUT</button> : <button onClick={toggleLoginButton}>LOG IN</button>}
                 </nav>
             </div>

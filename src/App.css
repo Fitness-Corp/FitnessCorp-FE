@@ -28,10 +28,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   background-color: transparent;
 }
 
-.test a, .shopping-cart {
+.test a, .menu-bars {
   font-size: 20px;
   text-decoration: none;
   color: white;
@@ -39,7 +40,7 @@ body {
   cursor: pointer;
 }
 
-.test button {
+.test button, .cart button {
   background-color: transparent;
   color: #c5302e;
   border: 2px solid #c5302e;
@@ -51,7 +52,40 @@ body {
 .test button:hover {
   background-color: #c5302e;
   color: white;
+  transition: color .3s ease-in-out;
 }
+
+/* checkout styling */
+.nav-menu {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 350px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  font-size: 2em;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 
 .splashLanding {
   margin-bottom: 5em;
