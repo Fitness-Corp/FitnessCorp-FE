@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import LoginPopUp from "../LoginPopUp";
 import '../../App.css';
 import workout from '../../assets/workout.mp4';
-
+import { FaSpotify } from 'react-icons/fa';
 
 
 const SplashLanding = ({ loginPop, loggedIn, dispatch }) => {
@@ -16,7 +16,7 @@ const SplashLanding = ({ loginPop, loggedIn, dispatch }) => {
             <div className="homePage">
                 <h1>GET FIT<br />WITH US</h1>
                 {loginPop ? <><LoginPopUp /></> : ''}
-                <button onClick={() => openInNewTab('https://open.spotify.com/playlist/7DaNB3xvJ4F96C66mQgmpS?si=8f7c3a75926946bd')}>Spotify</button>
+                <button onClick={() => openInNewTab('https://open.spotify.com/playlist/7DaNB3xvJ4F96C66mQgmpS?si=8f7c3a75926946bd')}><span><FaSpotify /></span>CHECK OUR PLAYLIST</button>
             </div>
 
         </div>

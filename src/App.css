@@ -86,7 +86,6 @@ body {
   align-items: center;
 }
 
-
 .splashLanding {
   margin-bottom: 5em;
 }
@@ -109,6 +108,30 @@ body {
 .homePage h1 {
   font-size: 70px;
   padding: 3em 0 0 2em;
+}
+
+.homePage button {
+  color: white;
+  border: 1px solid #c5302e;
+  background-color: #c5302e;
+  cursor: pointer;
+  margin-left: 10em;
+  padding: 1em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homePage button:hover {
+  border: 1px solid black;
+  background-color: black;
+  transition: color .3s ease-in-out;
+}
+
+.homePage span {
+  font-size: 20px;
+  padding-right: 0.5em;
 }
 
 /* about us section */
