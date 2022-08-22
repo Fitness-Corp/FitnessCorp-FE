@@ -5,7 +5,11 @@ import '../../App.css';
 import workout from '../../assets/workout.mp4';
 
 
+
 const SplashLanding = ({ loginPop, loggedIn, dispatch }) => {
+    const openInNewTab = url => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
     return (
         <div className="splashLanding">
             <video src={workout} autoPlay loop muted id="video" />
