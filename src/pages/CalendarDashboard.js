@@ -2,6 +2,7 @@ import React from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
+
 export default function CalendarDashboard() {
   const utc = new Date().toISOString().slice(0, 10);
   return (
@@ -9,7 +10,7 @@ export default function CalendarDashboard() {
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
-        events={[
+        events={[ //axios call map to here for events
           { title: 'event 1', date: utc },
           { title: 'event 2', date: '2022-08-09' }
         ]}
