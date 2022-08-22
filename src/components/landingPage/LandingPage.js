@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import NavBar from './NavBar';
 import SplashLanding from './SplashLanding';
 import AboutUs from './AboutUs';
 import ClassSection from './ClassSection';
@@ -10,6 +9,7 @@ import Footer from './Footer';
 import { useNavigate } from "react-router-dom";
 import { connect } from 'react-redux';
 import { validate } from '../../actions';
+import NavBar from './NavBar';
 
 
 const LandingPage = ({ loggedIn, fetching, dispatch }) => {
@@ -32,6 +32,7 @@ const LandingPage = ({ loggedIn, fetching, dispatch }) => {
   return (
     <div>
       <div className="App">
+        <NavBar />
         <SplashLanding />
         <AboutUs />
         <ClassSection />
