@@ -33,18 +33,19 @@ const NavBar = () => {
                             <Checkout />
                         </ul>
                     </nav>
-
                     <Popup
                         trigger={<button>LOG IN</button>}
                         modal
                         nested
                     >
                         {close => (
-                            <div className="modal">
-                                <button className="close" onClick={close}>
+                            <div className="testing">
+                                <button className="closed" onClick={close}>
                                     &times;
                                 </button>
-                                <LoginPopUp />
+                                <div className="trigger">
+                                    <LoginPopUp />
+                                </div>
                             </div>
                         )}
                     </Popup>
@@ -53,7 +54,6 @@ const NavBar = () => {
         </div>
     );
 };
-
 
 
 export default NavBar;

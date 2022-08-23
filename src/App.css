@@ -126,12 +126,67 @@ body {
 .homePage button:hover {
   border: 1px solid black;
   background-color: black;
-  transition: color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
 }
 
 .homePage span {
   font-size: 20px;
   padding-right: 0.5em;
+}
+
+/* log in and register modals */
+.trigger {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10em;
+  background-color: #ECECEC;
+  color: #191919;
+}
+
+.closed {
+  font-size: 24px;
+  border-radius: 18px;
+  background-color: #c5302e;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 18.47em;
+  margin-top: 0.1em;
+  padding: 2px 5px;
+  line-height: 20px;
+}
+
+.formItem {
+  font-size: 20px;
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formItem input {
+  padding: 0.5em;
+  border: 1px solid #c5302e;
+}
+
+.formItem button {
+  cursor: pointer;
+  border: 1px solid palevioletred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  padding: 1em;
+  background-color: #c5302e;
+  color: white;
+  border-radius: 15px;
+}
+
+.reg-sub {
+  margin-bottom: 2em;
 }
 
 /* about us section */

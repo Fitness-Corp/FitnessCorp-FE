@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { login } from "../actions";
 import { connect } from "react-redux";
 import RegistrationPopUp from "./RegistrationPopUp";
@@ -53,21 +52,22 @@ const LoginPopUp = ({ fetching, loggedIn, dispatch }) => {
         );
     }
     return (
-        <div>
+        <div className="log-in-form">
             <form>
                 {/* <h3>{error.toUpperCase()}</h3> */}
                 <div className="formItem">
-                    <label htmlFor="username">User Name or Email:</label>
+                    <h3>LOG IN</h3>
+                    <label htmlFor="username">Username or Email *</label>
                     <input
                         onChange={handleChange}
                         value={form.username}
                         id='username'
                         name='username'
-                        placeholder="User Name"
+                        placeholder="john@email.com"
                     />
                 </div>
                 <div className="formItem">
-                    <label htmlFor="password">Password:</label>
+                    <label htmlFor="password">Password *</label>
                     <input
                         onChange={handleChange}
                         value={form.password}
@@ -77,8 +77,11 @@ const LoginPopUp = ({ fetching, loggedIn, dispatch }) => {
                         placeholder="Password"
                     />
                 </div>
-                <button onClick={handleSubmit}>Submit</button><br></br>
-                <button onClick={toggleRegister}>Register here</button>
+                <div className="formItem">
+                    <button onClick={handleSubmit}>LOG IN</button>
+                    <p>Need to create an account?</p>
+                    <button className="reg-sub" onClick={toggleRegister}>REGISTER</button>
+                </div>
             </form>
         </div>
     );
