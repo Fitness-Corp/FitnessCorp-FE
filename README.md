@@ -20,4 +20,5 @@
 https://www.figma.com/file/hiCs9ogM3VZNTgheUMDNJe/Gym-Project-Fitness-Corp
 
 
-##### Created by: Ted Volchko & Jessica Ambrocio 
+##### App created by: Ted Volchko & Jessica Ambrocio.
+##### Copyright to Fitness - firstsight_design on ThemeForest.

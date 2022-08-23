@@ -14,7 +14,7 @@ const ClassModalCard = ({ gym }) => {
         <h3>What you need to know before the class:</h3>
         <p><span><BsClock /></span>{gym.firstText}</p>
         <p><span><GiWaterDrop /></span>{gym.secondText}</p>
-        <button onClick={() => alert('Currently working on checkout system.')}>CHECKOUT</button>
+        <button onClick={() => alert('Currently working on checkout system.')}>Add To Cart</button>
       </div>
     </div>
   );

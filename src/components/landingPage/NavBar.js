@@ -25,7 +25,10 @@ const NavBar = ({ cart }) => {
                     <a href="#contact">CONTACT</a>
 
                     <span className="menu-bars">
-                        <AiOutlineShoppingCart onClick={handleOpen} />({cart.quantity})
+                        <AiOutlineShoppingCart onClick={handleOpen} />
+                        <span className="nav-quantity">
+                            {cart.quantity}
+                        </span>
                     </span>
                     <nav className={menuOpen ? 'nav-menu active' : 'nav-menu'}>
                         <ul className='nav-menu-items' onClick={handleOpen}>
