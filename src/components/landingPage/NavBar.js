@@ -4,21 +4,15 @@ import '../../App.css';
 import { AiOutlineClose, AiOutlineShoppingCart } from 'react-icons/ai';
 import Checkout from "./Checkout";
 import Popup from "reactjs-popup";
+import { connect } from "react-redux";
 
-const NavBar = ({ cart, loggedIn, dispatch }) => {
-
-    const toggleLoginButton = () => {
-        dispatch(toggleLogin());
-    };
-    const logOut = () => {
-        dispatch(logout());
-    };
+const NavBar = ({ cart }) => {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const handleOpen = () => {
         setMenuOpen(!menuOpen);
     };
-    
+
 
     return (
         <div className="navBar">

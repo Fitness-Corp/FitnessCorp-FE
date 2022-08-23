@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { login } from "../actions";
 import { connect } from "react-redux";
 import { register } from "../actions";
 import LoginPopUp from "./LoginPopUp";
