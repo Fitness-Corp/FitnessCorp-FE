@@ -5,12 +5,20 @@ import { AiOutlineClose, AiOutlineShoppingCart } from 'react-icons/ai';
 import Checkout from "./Checkout";
 import Popup from "reactjs-popup";
 
-const NavBar = () => {
+const NavBar = ({ cart, loggedIn, dispatch }) => {
+
+    const toggleLoginButton = () => {
+        dispatch(toggleLogin());
+    };
+    const logOut = () => {
+        dispatch(logout());
+    };
 
     const [menuOpen, setMenuOpen] = useState(false);
     const handleOpen = () => {
         setMenuOpen(!menuOpen);
     };
+    
 
     return (
         <div className="navBar">
@@ -23,7 +31,7 @@ const NavBar = () => {
                     <a href="#contact">CONTACT</a>
 
                     <span className="menu-bars">
-                        <AiOutlineShoppingCart onClick={handleOpen} />
+                        <AiOutlineShoppingCart onClick={handleOpen} />({cart.quantity})
                     </span>
                     <nav className={menuOpen ? 'nav-menu active' : 'nav-menu'}>
                         <ul className='nav-menu-items' onClick={handleOpen}>
@@ -56,5 +64,13 @@ const NavBar = () => {
 };
 
 
-export default NavBar;
+const mapState = (state) => {
+    return {
+        loggedIn: state.loggedIn,
+        cart: state.cart
+    };
+};
+
+
+export default connect(mapState)(NavBar);
 
