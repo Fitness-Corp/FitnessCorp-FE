@@ -1,12 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-import React, { useEffect } from 'react';
-import logger from "redux-logger";
+import React from 'react';
 // import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
 import { Provider } from "react-redux";
-import reducer from './reducers';
+import reducer from '../src/reducers/index';
 import { configureStore } from '@reduxjs/toolkit';
 
 import Dashboard from './pages/Dashboard';
