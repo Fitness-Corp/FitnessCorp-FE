@@ -123,7 +123,7 @@ body {
   align-items: center;
 }
 
-.homePage button:hover {
+.homePage button:hover, .formItem button:hover {
   border: 1px solid black;
   background-color: black;
   transition: background-color .3s ease-in-out;
@@ -174,7 +174,6 @@ body {
 
 .formItem button {
   cursor: pointer;
-  border: 1px solid palevioletred;
   display: flex;
   justify-content: center;
   align-items: center;
