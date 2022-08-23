@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
-import { toggleLogin } from "../../actions";
-import { logout } from "../../actions";
+import LoginPopUp from "../LoginPopUp";
 import '../../App.css';
 import { AiOutlineClose, AiOutlineShoppingCart } from 'react-icons/ai';
 import Checkout from "./Checkout";
+import Popup from "reactjs-popup";
 
 const NavBar = ({ cart, loggedIn, dispatch }) => {
 
     const toggleLoginButton = () => {
-
         dispatch(toggleLogin());
     };
     const logOut = () => {
@@ -43,8 +41,22 @@ const NavBar = ({ cart, loggedIn, dispatch }) => {
                             <Checkout />
                         </ul>
                     </nav>
-
-                    {loggedIn ? <button onClick={logOut}>LOG OUT</button> : <button onClick={toggleLoginButton}>LOG IN</button>}
+                    <Popup
+                        trigger={<button>LOG IN</button>}
+                        modal
+                        nested
+                    >
+                        {close => (
+                            <div className="testing">
+                                <button className="closed" onClick={close}>
+                                    &times;
+                                </button>
+                                <div className="trigger">
+                                    <LoginPopUp />
+                                </div>
+                            </div>
+                        )}
+                    </Popup>
                 </nav>
             </div>
         </div>
