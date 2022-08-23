@@ -8,7 +8,7 @@ export default function MembershipSection() {
   return (
     <div className='membership-section' id='membership'>
       <h3>CHOOSE YOUR MEMBERSHIP</h3>
-      <p>ONE MEMBERSHIP ALLOWED AT A TIME</p>
+      {/* <p>ONE MEMBERSHIP ALLOWED AT A TIME</p> */}
       <div className='membership-info'>
         {
           membershipData.map((m) => (
