@@ -1,4 +1,4 @@
-import { TOGGLE_LOGIN, FETCH_FAIL, FETCH_START, FETCH_SUCCESS, FORM_ERROR, LOG_OUT, ADD_ITEM, REMOVE_ITEM } from "../actions/index";
+import { TOGGLE_LOGIN, FETCH_FAIL, FETCH_START, FETCH_SUCCESS, FORM_ERROR, LOG_OUT, ADD_ITEM, REMOVE_ITEM } from "../../src/actions/index";
 import { v4 as uuidv4 } from 'uuid';
 
 export const initialState = {
