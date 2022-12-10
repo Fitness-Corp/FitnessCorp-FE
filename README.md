@@ -6,13 +6,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/Fitness-Corp/FitnessCorp-FE">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/fitness.png" alt="Logo" width="500" height="400">
   </a>
 
 <h3 align="center">Fitness Corp</h3>
 
   <p align="center">
-    project_description
+    Get Fit With Us. 
     <br />
     <a href="https://github.com/Fitness-Corp/FitnessCorp-FE"><strong>Explore the docs »</strong></a>
     <br />
@@ -53,10 +53,9 @@
 <!-- ABOUT THE PROJECT -->
 ## Languages Used 
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<div align="center">
+    <img src="src/assets/techstack.png" alt="Logo" width="500" height="400">
+</div>
 
 ### Front End
 ![React](https://img.shields.io/badge/-React-333333?style=flat&logo=react)
